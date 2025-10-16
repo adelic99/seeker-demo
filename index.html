@@ -39,13 +39,16 @@
 </head>
 <body>
 
+<div style="position: absolute; top: 20px; right: 20px; z-index: 1000;">
+  <img src="./static/images/ICCV 2025 Logo Color Website.png" alt="ICCV Logo" style="width: 300px; height: auto;">
+</div>
+
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Sequential Keypoint Density Estimator: </h1>
           <h1 class="title is-2 publication-subtitle">An overlooked baseline of skeleton-based video anomaly detection</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -111,10 +114,45 @@
   </div>
 </section>
 
-
-<section class="section" id="project-video" style="background-color: #f9f9f9; padding: 2rem 0;">
+<section class="section" id="overview" style="background-color: #f9f9f9; padding: 2rem 0;">
   <div class="container">
-    <h2 class="title has-text-centered">SeeKer demo</h2>
+    <h2 class="title has-text-centered">SeeKer: Sequential Keypoint Density Estimator</h2>
+    <p class="subtitle has-text-centered">
+      We present SeeKer, a method for detecting
+      anomalous human behaviour by predicting the conditional
+      density of skeleton keypoints.
+      Given the preceding keypoints, 
+      SeeKer predicts a multivariate normal distribution 
+      over possible locations for the
+      subsequent keypoint. Applying this approach across 
+      the entire skeleton sequence 
+      results in an autoregressive factorization 
+      of the joint sequence density at the keypoint level.
+      SeeKer training corresponds to maximizing
+      sequence likelihood. During inference, SeeKer identifies
+      skeletons as anomalous if their constituent keypoints deviate 
+      from the predicted distributions. 
+    </p> 
+    <div class="image-container" style="display: flex; justify-content: center; align-items: center;">
+      <img src="./static/images/seeker-demo-image.png" alt="SeeKer Demo Image" style="width: 100%; max-width: 800px; background: #000;">
+    </div>
+    <p class="subtitle has-text-centered">
+      We evaluate on three datasets for skeleton-based video anomaly detection where SeeKer shows outstanding performance:
+      <ul class="subtitle has-text-centered" style="list-style: none; padding: 0;">
+        <li>
+          <a href="https://arxiv.org/abs/2111.08644" target="_blank">UBnormal</a> (CVPR 2022)
+        </li>
+        <li>
+          <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Zhang_Single-Image_Crowd_Counting_CVPR_2016_paper.pdf" target="_blank">ShanghaiTech</a> (CVPR 2016)
+        </li>
+        <li>
+          <a href="https://msad-dataset.github.io/" target="_blank">MSAD</a> (NeurIPS 2024)
+        </li>
+      </ul>
+    </p>
+    
+  </div>
+  <div class="container">
     <div class="video-container" style="display: flex; justify-content: center; align-items: center;">
       <video autoplay loop muted style="width: 100%; max-width: 800px; background: #000;">
         <source src="./static/videos/project-video.mp4" type="video/mp4">
@@ -125,10 +163,16 @@
 </section>
 
 
+<section class="section" id="project-video" style="background-color: #f9f9f9; padding: 2rem 0;">
+  
+</section>
+
+
 <section class="section" id="project-videos" style="background-color: #ffffff; padding: 2rem 0;">
   <div class="container">
     <h2 class="title has-text-centered">Qualitative results</h2>
-    <p class="subtitle has-text-centered">We demonstrate keypoint-level anomaly scores in different actions. </p>
+    <br>
+    <p class="subtitle has-text-centered">We demonstrate keypoint-level anomaly scores in different actions and scenes examples from the UBnormal dataset. </p>
     <p class="subtitle has-text-centered">Abnormal actions are: running, having a seizure, laying down, shuffling, walking drunk, people
         and car accident, jumping, and jaywalking.</p>
     <div class="columns is-multiline is-centered">
@@ -254,18 +298,18 @@
 </section>
 
 
-<!-- 
+
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code>@article{delic2025sequential,
+      title={Sequential keypoint density estimator: an overlooked baseline of skeleton-based video anomaly detection},
+      author={Deli{\'c}, Anja and Gr{\v{c}}i{\'c}, Matej and {\v{S}}egvi{\'c}, Sini{\v{s}}a},
+      journal={arXiv preprint arXiv:2506.18368},
+      year={2025}
+    }</code></pre>
   </div>
-</section> -->
+</section>
 
 
 
